@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS in browser</title>
+    <style>
+        .square{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            transition: 600ms;
+        }
+        .square_active{
+            transform: translate(200px, 200px) rotate(270deg) ;
+            border-radius: 50%;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn-move">Simple Button</button>
+    <div class="square"></div>
+    <script src="browser.js"></script>
+</body>
+</html>
