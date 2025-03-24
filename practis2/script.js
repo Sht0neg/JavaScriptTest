@@ -4,11 +4,11 @@ const headers = {
     'X-Yandex-Weather-Key': accessKey
 };
 
-//let l = document.querySelectorAll("img")
-//let l1 = document.querySelectorAll("p")
+let l = document.querySelectorAll("img")
+let li = document.querySelectorAll("p")
 
 async function getUrl(){
-    const response = await fetch('https://api.weather.yandex.ru/v2/forecast?lat=52.37125&lon=4.89388&limit=2&hours=false', { headers })
+    const response = await fetch('https://api.weather.yandex.ru/v2/forecast?lat=55.797660&lon=37.939133&limit=2&hours=false', { headers })
     const data = await response.json()
     const { parts } = data["forecasts"][1]
     k = 0
@@ -17,14 +17,14 @@ async function getUrl(){
         if(k != 2){
             if (k >= 3) {j = k - 1}
             else {j = k}
-            //l[j].setAttribute("src", `https://yastatic.net/weather/i/icons/funky/dark/${parts[i]["icon"]}.svg`)
+            l[j].setAttribute("src", `https://yastatic.net/weather/i/icons/funky/dark/${parts[i]["icon"]}.svg`)
             console.log(parts[i]["icon"])
             if (parts[i]["temp_avg"]){
-                //li[j].textContent = li[j].textContent + ` ${parts[i]["temp_avg"]}`
+                li[j].textContent = li[j].textContent + ` ${parts[i]["temp_avg"]} °C`
                 console.log(parts[i]["temp_avg"])
             }
             else{
-                //li[j].textContent = li[j].textContent + ` ${parts[i]["temp"]}`
+                li[j].textContent = li[j].textContent + ` ${parts[i]["temp"]} °C`
                 console.log(parts[i]["temp"])
             }
         }
