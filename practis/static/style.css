@@ -6,11 +6,23 @@ body{
     width: 100%;
 }
 header{
+    display: flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
     height: 200px;
     background: linear-gradient(0deg, rgba(13,17,23,1) 25%, rgba(0,120,212,1) 91%);
     width: 100%;
+}
+input{
+    margin-top: 35px;
+    padding: 0;
+    font-size: 30px;
+    color: rgb(195, 208, 229);
+    width: 500px;
+    height: 50px;
+    background-color: rgba(123, 104, 238, 0.3);
+
 }
 main{
     display: flex;

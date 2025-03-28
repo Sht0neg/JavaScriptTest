@@ -5,7 +5,7 @@ app.get("/", (req, res) =>{
     res.sendFile(`${__dirname}/index.html`)
 })
 
-app.use("/static/", express.static(__dirname))
+app.use("/static/", express.static(__dirname + "/static/"))
 
 app.get("/data", (req, res) => {
     res.sendFile(`${__dirname}/data.json`)
