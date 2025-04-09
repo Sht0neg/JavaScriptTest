@@ -11,4 +11,4 @@ app.get("/data", (req, res) => {
     res.json({data:"asdfdsf"})
 })
 
-app.listen(5000, () => console.log("http://127.0.0.1:5000"))
+app.listen(5000, () => console.log("http://26.221.241.105:5000"))
